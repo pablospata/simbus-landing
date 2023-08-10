@@ -1,0 +1,23 @@
+/** {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+section {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(40deg, #5B7CFD 0%, #6236FF 100%)    
+}
+
+section .white {
+    background-color: #fff;
+}
+
+*/
