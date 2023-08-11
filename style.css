@@ -58,6 +58,38 @@ p {
     line-height: 1.5rem;
 }
 
+
+.button a {
+    background-color: white;
+    border: 1px solid white;
+    white-space: nowrap;
+    color: #5B7CFD;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1.25rem 3.5rem;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    margin-top: 2rem;
+
+    transition: background-color 0.3s ease;
+}
+
+.button a:hover {
+    background-color: #eee;
+}
+
+.button.transparent a {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+}
+
+.button.transparent a:hover {
+    background-color: rgba(91, 124, 253, 0.5);
+}
+
 section {
     height: 100vh;
     background: linear-gradient(40deg, #5B7CFD 0%, #6236FF 100%);
@@ -77,20 +109,39 @@ section.white p {
     color: #666;
 }
 
-.columna {
-    flex: 1;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* justify-content: center; */
-    /* align-items: center; */
+section.white .button a {
+    background-color: transparent;
+    color: #5B7CFD;
+    border: 1px solid #5B7CFD;
 }
+
+section.white .button a:hover {
+    background-color: #eee;
+}
+
+.columna {
+    flex: 1;   
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.col1 {
+    flex-basis: 60%;    
+}
+
+.col2 {
+    flex-basis: 40%;
+}
+
 
 .navbar {
     position: absolute;
     z-index: 1;
     padding: var(--main-padding);
-    padding-top: 2.5rem;
-    padding-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
     width: 100%;
 
     display: flex;
@@ -110,12 +161,17 @@ section.white p {
 }
 
 .navbar .menu {
-    display: flex;        
+    display: flex;
     gap: 4vw;
 }
 
 .menu a {
     color: #ccc;
+}
+
+
+.menu a:hover {
+    color: white;
 }
 
 .menu .active {
@@ -124,32 +180,72 @@ section.white p {
 }
 
 .navbar .button a {
-    background-color: white;
-    color: #5B7CFD;
     font-size: 0.875rem;
-    font-weight: 500;
     padding: 0.75rem 1.75rem;
-    border-radius: .25rem;
-    font-size: 1rem;
-}
-
-.navbar .button a:hover {
-    background-color: #eee;
-}
-
-#hero p {
-    font-size: 1.25rem;
-    line-height: 2rem;
+    width: auto;
+    margin-top: 0;
 }
 
 #hero .columna {
-    flex: 0;
+    flex: 0;    
 }
 
 #hero .text {
     flex-basis: 60%;
 }
 
+#hero p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    width: 90%;
+}
+
+#hero .buttons {
+    display: flex;
+    gap: 1rem;    
+}
+
 #hero .img {
     flex-basis: 40%;
+}
+
+.img img {
+    max-width: 120%;
+    object-fit: contain;
+}
+
+#services .col1 h2, 
+#services .col1 p{
+    width: 80%;
+}
+
+#services .col2 {
+    gap: 8vw;
+}
+
+.service-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem; 
+}
+
+
+
+@media screen and (max-width: 815px) {
+
+    #hero {
+        flex-direction: column;        
+        text-align: center;     
+    }
+
+    #hero .buttons {
+        justify-content: center;
+    }
 }
