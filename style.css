@@ -137,11 +137,6 @@ section.white p {
     background-color: #eee;
 }
 
-.navbar .button a:active {
-    transform: translateY(1px)
-}
-
-
 #hero p {
     font-size: 1.25rem;
     line-height: 2rem;
