@@ -1,16 +1,32 @@
+:root {
+    --main-padding: 0 10vw;
+}
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-size: 3rem;
-    font-weight: 700;    
+    font-weight: 700;
     line-height: 4.5rem;
 }
 
@@ -24,13 +40,13 @@ h4 {
     font-weight: 400;
     letter-spacing: 0.0625rem;
     text-transform: uppercase;
-    color: #5B7CFD;    
+    color: #5B7CFD;
 }
 
 h5 {
     font-size: 1.25rem;
     font-weight: 400;
-    line-height: 2rem;    
+    line-height: 2rem;
 }
 
 span {
@@ -49,15 +65,15 @@ section {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 0 10vw;
+    padding: var(--main-padding);
 }
 
-section.white {        
+section.white {
     background: white;
     color: #333;
 }
 
-section.white p {        
+section.white p {
     color: #666;
 }
 
@@ -68,6 +84,63 @@ section.white p {
     /* justify-content: center; */
     /* align-items: center; */
 }
+
+.navbar {
+    position: absolute;
+    z-index: 1;
+    padding: var(--main-padding);
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo p {
+    color: white;
+    font-size: 1.875rem;
+    font-weight: 500;
+}
+
+.logo p span {
+    color: white;
+    font-weight: 700;
+}
+
+.navbar .menu {
+    display: flex;        
+    gap: 4vw;
+}
+
+.menu a {
+    color: #ccc;
+}
+
+.menu .active {
+    color: white;
+    font-weight: 500;
+}
+
+.navbar .button a {
+    background-color: white;
+    color: #5B7CFD;
+    font-size: 0.875rem;
+    font-weight: 500;
+    padding: 0.75rem 1.75rem;
+    border-radius: .25rem;
+    font-size: 1rem;
+}
+
+.navbar .button a:hover {
+    background-color: #eee;
+}
+
+.navbar .button a:active {
+    transform: translateY(1px)
+}
+
 
 #hero p {
     font-size: 1.25rem;
