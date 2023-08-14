@@ -408,11 +408,11 @@ img {
 }
 
 
-#pricing {    
+#pricing {
     height: auto;
     flex-direction: column;
     justify-content: center;
-    text-align: center;   
+    text-align: center;
     padding-top: 15vh;
     padding-bottom: 15vh;
 }
@@ -425,10 +425,10 @@ img {
 
 .pricing-cards {
     margin-top: 6rem;
-    display: flex;        
+    display: flex;
 }
 
-.pricing-card {    
+.pricing-card {
     border-radius: 0.5rem;
     border: 1px solid #DEDEDE;
     background: #FFF;
@@ -447,7 +447,7 @@ img {
     background: #333;
     color: white;
     font-size: 1.25rem;
-    font-weight: 500;    
+    font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: .75rem;
@@ -455,8 +455,8 @@ img {
 }
 
 
-.pricing-card.active .pricing-packet {  
-    background: #5B7CFD;      
+.pricing-card.active .pricing-packet {
+    background: #5B7CFD;
 }
 
 
@@ -504,6 +504,81 @@ img {
     padding: 1.25rem;
     font-weight: 500;
 }
+
+#testimonials {
+    height: auto;
+    flex-direction: column;
+    padding: 10vh 5vw;
+    align-items: start;
+}
+
+#testimonials h2 {
+    padding-left: 5vw;
+}
+
+#testimonials>img {
+    padding-left: 3vw;
+}
+
+.testimonial-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    position: relative;
+    padding: 2rem;
+}
+
+.testimonial-cards>img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.testimonial-card {
+    max-width: 30%;
+    border-radius: 0.5rem;
+    border: 1px solid #DEDEDE;
+    background: #FFF;
+    padding: 2.5rem;
+    z-index: 1;
+}
+
+.testimonial-card p {
+    color: #666;
+    line-height: 1.5rem;
+}
+
+.testimonial-person {
+    display: flex;    
+    align-items: center;
+    gap: .5rem;
+    margin-top: 1rem;
+}
+
+.testimonial-photo {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #D8D8D8;
+    border-radius: 50%;
+}
+
+
+.testimonial-name-work>h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+}
+
+
+.testimonial-name-work>p {
+    font-size: 0.875rem;
+}
+
+
+
+
+
 
 @media screen and (max-width: 815px) {
 
