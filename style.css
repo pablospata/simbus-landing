@@ -58,8 +58,8 @@ p {
 }
 
 
-.button a {
-    background-color: white;
+.button{
+    background-color: white;    
     border: 1px solid white;
     white-space: nowrap;
     color: #5B7CFD;
@@ -71,8 +71,14 @@ p {
     justify-content: center;
     width: 12rem;
     margin-top: 2rem;
+    cursor: pointer;
 
     transition: background-color 0.3s ease;
+    z-index: 3;
+}
+
+.button:hover {
+    background-color: #eee;
 }
 
 button.select {
@@ -103,7 +109,7 @@ button.select.active:hover {
 }
 
 
-.button.transparent a {
+.button.transparent {
     background-color: transparent;
     border: 1px solid white;
     color: white;
@@ -141,13 +147,13 @@ section.white p {
     color: #666;
 }
 
-section.white .button a {
+section.white .button {
     background-color: transparent;
     color: #5B7CFD;
     border: 1px solid #5B7CFD;
 }
 
-section.white .button a:hover {
+section.white .button:hover {
     background-color: #eee;
 }
 
@@ -214,7 +220,7 @@ section.white .button a:hover {
     font-weight: 500;
 }
 
-.navbar .button a {
+.navbar .button {
     font-size: 0.875rem;
     padding: 0.75rem 1.75rem;
     width: auto;
@@ -738,7 +744,7 @@ form textarea {
 
 footer section {
     height: auto;
-    background: rgba(91, 124, 253, 0.78);
+    background: #5B7CFD;    
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -795,26 +801,33 @@ footer section .copyright {
 
 @media screen and (max-width: 815px) {
     body {
-        overflow-x: hidden;
+        overflow-x: hidden;        
+    }
+
+    header,
+    main,
+    footer,
+    section {
+        max-width: 100vw;
     }
 
     h1,
     h2 {
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: 2.5rem;
+        line-height: 3.5rem;
     }
 
     h3 {
-        font-size: 1.125rem;
+        font-size: 1.5rem;
     }
 
     h4 {
-        font-size: .75rem;
+        font-size: 1.25rem;
     }
 
     h5 {
-        font-size: .875rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.5rem;        
     }
 
     span {
@@ -822,13 +835,13 @@ footer section .copyright {
     }
 
     p {
-        font-size: .875rem;
-        line-height: 1.5rem;
+        font-size: 1rem;
+        line-height: 1.75rem;
     }
 
-    .button a {
-        font-size: .875rem;
-        padding: .75rem 1.5rem;
+    .button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
         width: 10rem;
     }
 
@@ -882,13 +895,13 @@ footer section .copyright {
     }
 
     #hero h1 {
-        padding: 0 3rem;
+        padding: 0 2rem;
     }
 
     #hero p {
-        font-size: .875rem;
-        line-height: 1.375rem;
-        padding: 0 3rem;
+        font-size: 1.125rem;
+        line-height: 2rem;
+        padding: 0 2rem;
     }
 
     #hero .img {
@@ -902,13 +915,15 @@ footer section .copyright {
 
     #services .columna {
         padding: 1rem 1rem;
+        align-items: center;
     }
 
     #services .columna>h2,
     #services .columna>p,
-    #services .columna>.button a {
+    #services .columna>.button {
         width: 100%;
     }
+    
 
     #services .col1>.button {
         display: none;
@@ -916,6 +931,7 @@ footer section .copyright {
 
     #services .col2>.button {
         display: block;
+        padding: 1.5rem;
     }
 
     #services .col2 .service-card {
@@ -932,7 +948,7 @@ footer section .copyright {
         max-width: 70%;
     }
 
-    #transform .button a {
+    #transform .button {
         width: 100%;
         padding: 1.5rem;
         background-color: transparent;
@@ -944,11 +960,8 @@ footer section .copyright {
         display: none;
     }
 
-    #projects {}
-
     .project-container {
-        width: 90%;
-        /* height: auto; */
+        width: 90%;        
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         gap: 1rem 1rem;
