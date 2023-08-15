@@ -69,7 +69,7 @@ p {
     border-radius: .25rem;
     display: flex;
     justify-content: center;
-    width: 12rem;
+    width: 14rem;
     margin-top: 2rem;
     cursor: pointer;
 
@@ -90,7 +90,7 @@ button.select {
     padding: .75rem 1.75rem;
     width: auto;
     transition: background-color 0.3s ease;
-    cursor: pointer;
+    
 }
 
 button.select:hover {
@@ -115,7 +115,7 @@ button.select.active:hover {
     color: white;
 }
 
-.button.transparent a:hover {
+.button.transparent:hover {
     background-color: rgba(91, 124, 253, 0.5);
 }
 
@@ -443,6 +443,7 @@ img {
     text-align: center;
     padding-top: 15vh;
     padding-bottom: 15vh;
+    position: relative;
 }
 
 #pricing h5 {
@@ -533,6 +534,14 @@ img {
     font-weight: 500;
 }
 
+#pricing .info {
+    position: absolute;
+    left: 50vw;
+    bottom: 1rem;
+    transform: translate(-50%);
+    font-size: .875rem;    
+}
+
 #testimonials {
     height: auto;
     flex-direction: column;
@@ -584,7 +593,7 @@ img {
     margin-top: 1rem;
 }
 
-.testimonial-photo {
+.testimonial-photo img {
     width: 2.5rem;
     height: 2.5rem;
     background-color: #D8D8D8;
@@ -603,10 +612,18 @@ img {
     font-size: 0.875rem;
 }
 
-
 #process {
-    height: 50vh;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;    
+    position: relative;
 }
+
+#process h2 {
+    font-size: 2.5rem;
+    padding-top: 2rem;
+}
+
 
 .process-container {
     display: flex;
@@ -629,6 +646,28 @@ img {
 .process-card>p {
     margin-top: .5rem;
 }
+
+.oval-top-left,
+.oval-bottom-right {
+    position: absolute;
+    width: 40vw;    
+    height: 40vw;    
+    background: radial-gradient(circle, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    border-radius: 50%;      
+}
+
+.oval-top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+.oval-bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: translate(60%, 50%);
+}
+
 
 #form {
     height: auto;
@@ -814,7 +853,7 @@ footer section .copyright {
 
     h1,
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.75rem;
         line-height: 3.5rem;
     }
 
@@ -911,7 +950,15 @@ footer section .copyright {
     }
 
     #hero .buttons {
+        flex-direction: column;
         justify-content: center;
+        gap: 1rem;
+    }
+
+    #hero .buttons .button {
+        padding: 1.25rem;
+        margin: 0;
+        width: 100%;
     }
 
     #services .columna {
