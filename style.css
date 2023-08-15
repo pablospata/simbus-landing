@@ -316,23 +316,29 @@ img {
 #projects {
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 4rem;    
 }
 
 
 .project-container>div {
     background-color: #bebebe;
-    border: 1rem solid white;
+    border: 1rem solid #5b7bfd63;
     box-shadow: 0px 10px 20px 0px rgba(46, 51, 71, 0.08);
-    width: auto;
-    height: auto;
+    width: 100%; /* Cambio importante aquí */
+    height: 100%; /* Cambio importante aquí */
+    transition: transform 0.3s ease-in-out; 
 }
 
 .project-container>div>img {
     max-width: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
 }
 
+.project-container>div:hover{
+    transform: scale(1.03);
+}
 
 .project-container {
     width: 100%;
@@ -347,6 +353,12 @@ img {
         "project2 project3 project4 project4"
         "project5 project5 project6 project7"
         "project5 project5 project8 project9";
+}
+
+.small img, .medium img, .large img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: 100%; /* Asegura que la imagen ocupe toda la altura del contenedor */
+    object-fit: cover; /* Hace que la imagen se recorte y se ajuste al tamaño de su contenedor */
 }
 
 .project1 {
@@ -383,6 +395,48 @@ img {
 
 .project9 {
     grid-area: project9;
+}
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 90vw;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.project-container img {
+    cursor: pointer;
 }
 
 
@@ -854,7 +908,7 @@ footer section .copyright {
 
     h1,
     h2 {
-        font-size: 2.75rem;
+        font-size: 2.5rem;
         line-height: 3.5rem;
     }
 
@@ -936,7 +990,8 @@ footer section .copyright {
     }
 
     #hero h1 {
-        padding: 0 2rem;
+        padding: 0 1.5rem;
+        margin-top: 4rem;
     }
 
     #hero p {

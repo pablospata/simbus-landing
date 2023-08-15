@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #projects {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .project-container>div {
+            background-color: #bebebe;
+            border: 1rem solid white;
+            box-shadow: 0px 10px 20px 0px rgba(46, 51, 71, 0.08);
+            width: 100%;
+
+            height: 100%;
+
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-container>div>img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-container>div:hover {
+            transform: scale(1.1);
+        }
+
+        .project-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 1rem 1rem;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "project1 project3 project4 project4"
+                "project2 project3 project4 project4"
+                "project5 project5 project6 project7"
+                "project5 project5 project8 project9";
+        }
+
+        .small img,
+        .medium img,
+        .large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .project1 {
+            grid-area: project1;
+        }
+
+        .project2 {
+            grid-area: project2;
+        }
+
+        .project3 {
+            grid-area: project3;
+        }
+
+        .project4 {
+            grid-area: project4;
+        }
+
+        .project5 {
+            grid-area: project5;
+        }
+
+        .project6 {
+            grid-area: project6;
+        }
+
+        .project7 {
+            grid-area: project7;
+        }
+
+        .project8 {
+            grid-area: project8;
+        }
+
+        .project9 {
+            grid-area: project9;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="projects" class="white2">
+
+        <div class="buttons-select">
+            <button class="select active">SimBus.io</button>
+            <button class="select">Websites</button>
+            <button class="select">Landing Pages</button>
+            <button class="select">E-commerce Sites</button>
+        </div>
+
+        <div class="project-container">
+            <div class="project1 small">
+                <img src="./assets/projects/1.avif" alt="">
+            </div>
+            <div class="project2 small">
+                <img src="./assets/projects/2.avif" alt="">
+            </div>
+            <div class="project3 medium">
+                <img src="./assets/projects/3.png" alt="">
+            </div>
+            <div class="project4 large">
+                <img src="./assets/projects/4.avif" alt="">
+            </div>
+            <div class="project5 large">
+                <img src="./assets/projects/5.avif" alt="">
+            </div>
+            <div class="project6 small">
+                <img src="./assets/projects/6.avif" alt="">
+            </div>
+            <div class="project7 small">
+                <img src="./assets/projects/7.avif" alt="">
+            </div>
+            <div class="project8 small">
+                <img src="./assets/projects/8.avif" alt="">
+            </div>
+            <div class="project9 small">
+                <img src="./assets/projects/9.avif" alt="">
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
