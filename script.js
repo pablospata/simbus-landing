@@ -21,6 +21,18 @@ function sendWhatsAppMessage() {
     window.open(waLink, '_blank');
 }
 
+
+function sendWhatsAppMail() {
+    
+    const email = encodeURIComponent(document.querySelector('#cta #email').value);    
+
+    const text = `Hola, quiero ponerme en contacto, mi mail es: ${email}`;
+
+    const waLink = `https://wa.me/${5492345400586}?text=${text}`;
+        
+    window.open(waLink, '_blank');
+}
+
 function openModal(imgSrc) {
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('img01');
