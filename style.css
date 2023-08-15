@@ -217,6 +217,10 @@ section.white .button a:hover {
     margin-top: 0;
 }
 
+#hero {
+    position: relative;
+}
+
 #hero h1 {
     margin-top: 6rem;
 }
@@ -243,6 +247,20 @@ section.white .button a:hover {
 #hero .img {
     flex-basis: 40%;
 }
+
+#hero .svg1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;    
+}
+
+#hero .svg2 {
+    position: absolute;
+    left: 0;
+    top: 0;    
+}
+
+
 
 img {
     max-width: 120%;
