@@ -180,6 +180,10 @@ section.white .button a:hover {
     justify-content: space-between;
 }
 
+.logo {
+    z-index: 2;
+}
+
 .logo p {
     color: white;
     font-size: 1.875rem;
@@ -251,13 +255,13 @@ section.white .button a:hover {
 #hero .svg1 {
     position: absolute;
     right: 0;
-    bottom: 0;    
+    bottom: 0;
 }
 
 #hero .svg2 {
     position: absolute;
     left: 0;
-    top: 0;    
+    top: 0;
 }
 
 
@@ -838,9 +842,36 @@ footer section .copyright {
 
     .navigation-icon {
         display: block;
+        z-index: 2;
+        cursor: pointer;
     }
 
-    .navbar .menu,
+    .navbar .menu {
+        z-index: 1;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 6rem 0 3rem 0;
+        background: linear-gradient(40deg, #5B7CFD 0%, #6236FF 100%);
+    }
+
+    .navbar .menu.active {
+        display: flex;
+    }
+
+    .navbar .menu.active {
+        position: fixed;
+    }
+
+    .navbar .logo.active p,
+    .navbar .navigation-icon.active img{
+        position: fixed;
+    }
+
     .navbar .button {
         display: none;
     }
@@ -1037,14 +1068,14 @@ footer section .copyright {
     footer section .content ul {
         gap: .75rem;
     }
-    
+
     footer section .content {
         flex-wrap: wrap;
     }
 
     footer section .copyright {
         width: 90%;
-        padding: 2rem 3rem;        
+        padding: 2rem 3rem;
     }
-    
+
 }
