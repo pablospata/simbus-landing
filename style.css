@@ -550,7 +550,7 @@ img {
 }
 
 .testimonial-person {
-    display: flex;    
+    display: flex;
     align-items: center;
     gap: .5rem;
     margin-top: 1rem;
@@ -576,8 +576,102 @@ img {
 }
 
 
+#process {
+    height: 50vh;
+}
 
+.process-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5rem;
+}
 
+.process-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    height: max-content;
+    text-align: center;
+    gap: 1rem;
+}
+
+.process-card>p {
+    margin-top: .5rem;
+}
+
+#form {
+    height: 100vh;
+}
+
+#form .img {
+    padding: 5vw;
+    display: flex;
+    align-items: start;
+}
+
+#form .img img {
+    width: 90%;
+}
+
+#form p {
+    color: #666;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form input,
+.form textarea {
+    border: none;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    font-size: 1rem;
+    color: #555;
+    outline: none;
+    resize: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+form textarea {
+    height: 20vh;
+    
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container button {
+    background-color: #5B7CFD;
+    border: 1px solid #5B7CFD;
+    white-space: nowrap;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 1.25rem 3.5rem;
+    border-radius: .25rem;
+    display: flex;
+    justify-content: center;
+    width: 12rem;
+    margin-top: 1rem;
+
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #6236FF;
+}
 
 
 @media screen and (max-width: 815px) {
