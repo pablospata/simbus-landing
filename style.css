@@ -389,11 +389,8 @@ img {
     position: absolute;
     top: 50%;
     right: 5px;
-    /* Distancia desde la derecha */
     transform: translateY(-50%);
-    /* Centra el botón verticalmente */
     background-color: #5B7CFD;
-    /* Color del fondo del botón */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -404,9 +401,7 @@ img {
 
 .cta-btn:hover {
     background-color: #6236FF;
-    /* Color más oscuro al pasar el ratón por encima */
 }
-
 
 #pricing {
     height: auto;
@@ -603,7 +598,8 @@ img {
 }
 
 #form {
-    height: 100vh;
+    height: auto;    
+    padding-bottom: 10rem; 
 }
 
 #form .img {
@@ -673,6 +669,51 @@ form textarea {
     background-color: #6236FF;
 }
 
+#contact{
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    position: relative;
+}
+
+.contact-containers {
+    background: rgba(91, 124, 253, 0.78);
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: -5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+} 
+
+.contact-container svg {
+    border-radius: 0.5rem;
+    background: linear-gradient(180deg, #00C4FF 0%, #0091FF 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.contact-container p {
+    color: white !important;
+}
+
+#location {
+    
+}
 
 @media screen and (max-width: 815px) {
 
